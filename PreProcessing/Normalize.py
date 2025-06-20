@@ -1,4 +1,7 @@
 #Normalizing the data to ensure consistency
+#used indicnlp library for normalization
+# https://github.com/anoopkunchukuttan/indic_nlp_library
+
 
 import pandas as pd
 from indicnlp import common
