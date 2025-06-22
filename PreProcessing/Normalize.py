@@ -19,7 +19,7 @@ normalizer = factory.get_normalizer("kn")
 df = pd.read_csv("../dataset_1.csv")
 
 # Normalize sentence in kannada
-df['Column1'] = df['Column1'].apply(lambda x: normalizer.normalize(str(x)))
+df['Sentence'] = df['Sentence'].apply(lambda x: normalizer.normalize(str(x)))
 
 
 # Save cleaned version
