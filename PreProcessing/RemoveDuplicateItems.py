@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the dataset
-df = pd.read_csv("../dataset_1.csv")  # Replace with your actual file name
+df = pd.read_csv("../dataset_2.csv")  # Replace with your actual file name
 
 # Check how many total and duplicate sentences exist
 print(f"Original total rows: {len(df)}")

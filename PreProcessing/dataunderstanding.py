@@ -1,7 +1,7 @@
 #python script to understand the data
 import pandas as pd
 
-df=pd.read_csv("../dataset_1.csv")
+df=pd.read_csv("../Dataset_2.csv")
 null_rows = df[df.isnull().any(axis=1)]
 print(null_rows)
 print(df.columns)

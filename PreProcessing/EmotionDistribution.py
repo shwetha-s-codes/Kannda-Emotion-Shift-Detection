@@ -2,7 +2,7 @@
 import pandas as pd
 
 # Load your CSV file
-df = pd.read_csv("../dataset_1.csv")
+df = pd.read_csv("../dataset_2.csv")
 
 # To ensure Consistency
 df['Part1 Sentiment'] = df['Part1 Sentiment'].str.strip().str.lower()
