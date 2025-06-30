@@ -1,16 +1,27 @@
+#Removing some punctuation marks to get rid of unwanted data
+import re
 import pandas as pd
 
-#reading csv file
-df= pd.read_csv("..\dataset_1.csv")
-#replacing wrong Labels
-df['Part1 Sentiment']=df['Part1 Sentiment'].str.strip().replace("Negative","Negetive")
-df['Part2 Sentiment']=df['Part2 Sentiment'].str.strip().replace("Negative","Negetive")
+def remove_basic_punct(text):
+    # Remove basic punctuation
+    text = re.sub(r'[.,;:\'"]', '', text)
+    # Normalize spacing: replace multiple spaces with a single space
+    text = re.sub(r'\s+', ' ', text)
+    return text.strip()  # Remove leading/trailing spaces
+
+# Load your dataset
+df = pd.read_csv("../DataSets/Dataset_3.csv")
+
+# Apply cleanup to the 'Sentence' column
+df['Sentence'] = df['Sentence'].astype(str).apply(remove_basic_punct)
+
 #Removing Unwanted Spaces
+df['Part1 Sentiment']=df['Part1 Sentiment'].str.strip()
+df['Part2 Sentiment']=df['Part2 Sentiment'].str.strip()
 df['Sentence']=df['Sentence'].str.strip()
 df['Transition Word']=df['Transition Word'].str.strip()
-#Saving the changes to csv file
-df.to_csv("..\dataset_1.csv",index=False)
-print("labels Replaced Sucessfully")
-"""print(df['Column2'].unique())
-print(df['Column3'].unique())
-print(df['Column1'].head())"""
+
+
+# Save cleaned dataset
+df.to_csv("../DataSets/Dataset_3.csv", index=False, encoding='utf-8-sig')
+print("✅ Punctuations and extra spaces removed successfully.")
