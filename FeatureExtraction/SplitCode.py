@@ -2,7 +2,7 @@
 import pandas as pd
 
 # Load your dataset
-df = pd.read_csv("../DataSets\Merged_dataset.csv")  # Update with your actual filename
+df = pd.read_csv("../DataSets/Merged_dataset.csv")  # Update with your actual filename
 
 # Robust split function
 def split_with_transition(row):
@@ -29,6 +29,6 @@ for col in ['part1_sentence', 'part2_sentence']:
     df[col] = df[col].apply(lambda x: " ".join(str(x).strip().split()))
 
 # Save the cleaned dataset
-df.to_csv("../DataSets\dataset_split_with_transition.csv", index=False, encoding='utf-8-sig')
+df.to_csv("../DataSets/dataset_split_with_transition.csv", index=False, encoding='utf-8-sig')
 
 print("✅ Sentences split successfully. Transition and sentence correctly stored in part2.")
