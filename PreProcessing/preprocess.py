@@ -10,7 +10,7 @@ def remove_basic_punct(text):
     return text.strip()  # Remove leading/trailing spaces
 
 # Load your dataset
-df = pd.read_csv("../DataSets/Dataset_3.csv")
+df = pd.read_csv("../DataSets/Dataset_4.csv")
 
 # Apply cleanup to the 'Sentence' column
 df['Sentence'] = df['Sentence'].astype(str).apply(remove_basic_punct)
@@ -23,5 +23,5 @@ df['Transition Word']=df['Transition Word'].str.strip()
 
 
 # Save cleaned dataset
-df.to_csv("../DataSets/Dataset_3.csv", index=False, encoding='utf-8-sig')
+df.to_csv("../DataSets/Dataset_4.csv", index=False, encoding='utf-8-sig')
 print("✅ Punctuations and extra spaces removed successfully.")

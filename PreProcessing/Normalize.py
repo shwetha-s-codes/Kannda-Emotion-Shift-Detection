@@ -16,13 +16,13 @@ factory = IndicNormalizerFactory()
 normalizer = factory.get_normalizer("kn")
 
 # Load your dataset
-df = pd.read_csv("../DataSets/Dataset_3.csv")
+df = pd.read_csv("../DataSets/Dataset_4.csv")
 
 # Normalize sentence in kannada
 df['Sentence'] = df['Sentence'].apply(lambda x: normalizer.normalize(str(x)))
 
 
 # Save cleaned version
-df.to_csv("../DataSets/Dataset_3.csv", index=False)
+df.to_csv("../DataSets/Dataset_4.csv", index=False)
 print("Kannada text normalized and saved.")
 
