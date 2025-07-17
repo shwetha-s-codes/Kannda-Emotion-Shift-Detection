@@ -1,27 +1,25 @@
+# NaiveBayes_ShiftDetection.py
+
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix
 
-# Load dataset
-df = pd.read_csv("../DataSets/dataset_split_with_transition.csv")
+# Load dataset with shift labels
+df = pd.read_csv("../DataSets/dataset_with_shift_label.csv")
 
-# Flatten part1 and part2
-df_part1 = df[['part1_sentence', 'Part1 Sentiment']].rename(columns={'part1_sentence': 'text', 'Part1 Sentiment': 'label'})
-df_part2 = df[['part2_sentence', 'Part2 Sentiment']].rename(columns={'part2_sentence': 'text', 'Part2 Sentiment': 'label'})
-df_flat = pd.concat([df_part1, df_part2], ignore_index=True)
+# Clean data
+df['Sentence'] = df['Sentence'].astype(str).str.strip()
+df['Shift_Label'] = df['Shift_Label'].astype(str).str.strip()
 
-# Clean text and labels
-df_flat['text'] = df_flat['text'].astype(str).str.strip()
-df_flat['label'] = df_flat['label'].astype(str).str.strip()
-
-# Split
+# Split data
 X_train, X_test, y_train, y_test = train_test_split(
-    df_flat['text'], df_flat['label'], test_size=0.2, random_state=42)
+    df['Sentence'], df['Shift_Label'], test_size=0.2, random_state=42
+)
 
-# TF-IDF
-vectorizer = TfidfVectorizer(ngram_range=(1, 3), max_features=5000)
+# Feature extraction
+vectorizer = TfidfVectorizer(ngram_range=(1, 2), max_features=5000)
 X_train_vec = vectorizer.fit_transform(X_train)
 X_test_vec = vectorizer.transform(X_test)
 
@@ -29,13 +27,9 @@ X_test_vec = vectorizer.transform(X_test)
 model = MultinomialNB()
 model.fit(X_train_vec, y_train)
 
-# Evaluate
+# Predict & evaluate
 y_pred = model.predict(X_test_vec)
 
-print("✅ Classification Report:\n")
-print(classification_report(y_test, y_pred))
-
-print("\n🧮 Confusion Matrix:")
-print(confusion_matrix(y_test, y_pred))
-
-print("\n🎯 Accuracy:", model.score(X_test_vec, y_test))
+print("✅ Naive Bayes Classification Report:\n", classification_report(y_test, y_pred))
+print("🧮 Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
+print("🎯 Accuracy:", model.score(X_test_vec, y_test))

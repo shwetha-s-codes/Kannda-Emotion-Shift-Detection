@@ -1,7 +1,7 @@
 #python script to understand the data
 import pandas as pd
 
-df=pd.read_csv("../DataSets/Dataset_4.csv")
+df=pd.read_csv("../DataSets/Merged_dataset.csv")
 null_rows = df[df.isnull().any(axis=1)]
 print(null_rows)
 print(df.columns)
