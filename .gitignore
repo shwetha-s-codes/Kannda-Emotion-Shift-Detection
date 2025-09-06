@@ -2,6 +2,11 @@
 Extra/
 indic_nlp_resources/
 DataSets/
+ModelTraining/shift_predictions.csv
+ModelTraining/svm_model_new.pkl
+ModelTraining/tfidf_vectorizer_new.pkl
+BackEnd/__pycache__
+
 
 
 
