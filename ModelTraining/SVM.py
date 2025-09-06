@@ -5,6 +5,11 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import classification_report, confusion_matrix
+import joblib
+
+
+
+
 
 # Load dataset with shift labels
 df = pd.read_csv("../DataSets/dataset_with_shift_label.csv")
@@ -33,3 +38,7 @@ y_pred = model.predict(X_test_vec)
 print("✅ SVM Classification Report:\n", classification_report(y_test, y_pred))
 print("🧮 Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 print("🎯 Accuracy:", model.score(X_test_vec, y_test))
+
+# Save trained artifacts
+joblib.dump(model, "svm_model_new.pkl")
+joblib.dump(vectorizer, "tfidf_vectorizer_new.pkl")
