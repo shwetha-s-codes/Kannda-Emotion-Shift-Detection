@@ -87,6 +87,17 @@ Each sentence is labeled with:
 > This project currently uses **Logistic Regression, SVM, and Naive Bayes**. The goal is to eventually improve sentiment shift prediction using **Deep Learning models** such as BiLSTM or Transformer-based architectures.
 
 ---
+## Web Interface 
+> **Front End**
+> Used StreamLit to build a responsive web interface
+
+---
+**Back End**
+> Exposed a Model as REST API  using FastApi
+--
+> ## Sample OutPut
+> <img width="980" height="581" alt="Screenshot 2025-09-06 114914" src="https://github.com/user-attachments/assets/4a6e3f6e-7770-4a06-b62a-3fabca681f48" />
+<img width="787" height="372" alt="Screenshot 2025-09-06 114950" src="https://github.com/user-attachments/assets/d4c51066-0b9d-497b-8cd6-bd8915704133" />
 
 ## 🧷 Citation
 
