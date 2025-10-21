@@ -1,7 +1,17 @@
 #  Emotion Shift Prediction in Manually Annotated Kannada Text
 
-##  Objective  
-To detect **emotion shifts** within a **single sentence** written in the Kannada language using traditional machine learning models.
+## ⚖️ Intellectual Property Notice
+
+**Patent Pending:** A patent application has been filed for the system described herein. At this time, the application number is pending and will be updated once assigned.
+
+**Note:** This repository contains demonstration code only. The proprietary annotated dataset and specific annotation methodology remain confidential under patent protection.
+
+**Proprietary Components:**
+- The manually annotated training dataset (246 Kannada sentences with emotion shift labels) is **proprietary and confidential**
+- This repository contains **demonstration code only** for academic and portfolio purposes
+- The complete working system requires the proprietary dataset not included in this repository
+
+**License Note:** While the code is available under MIT license for educational reference, commercial use of the emotion shift detection methodology may require licensing. Contact: shwethakodimar29@gmail.com
 
 ---
 
