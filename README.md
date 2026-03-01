@@ -1,126 +1,13 @@
-#  Emotion Shift Prediction in Manually Annotated Kannada Text
+# Intellectual Property Notice
 
-## ⚖️ Intellectual Property Notice
+**Patent Application Number:** 202541111419 A  
+**Filing Date:** 14/11/2025  
+**Publication Date:** 05/12/2025  
 
-**Patent Pending:** A patent application has been filed for the system described herein. At this time, the application number is pending and will be updated once assigned.
+# Patent Information
 
-**Note:** This repository contains demonstration code only. The proprietary annotated dataset and specific annotation methodology remain confidential under patent protection.
+This research is protected under the aforementioned patent details.
 
-**Proprietary Components:**
-- The manually annotated training dataset (246 Kannada sentences with emotion shift labels) is **proprietary and confidential**
-- This repository contains **demonstration code only** for academic and portfolio purposes
-- The complete working system requires the proprietary dataset not included in this repository
+# Status
 
-**License Note:** While the code is available under MIT license for educational reference, commercial use of the emotion shift detection methodology may require licensing. Contact: shwethakodimar29@gmail.com
-
----
-
-## 📜 Description  
-
-This project involves the **manual annotation of Kannada sentences** that exhibit emotional transitions. Each sentence contains a shift from one emotion to another — such as from *positive to negative* — and includes common Kannada conjunctions like:  
-**ಆದರೆ**, **ಆದ್ದರಿಂದ**, **ಅಥವಾ**, **ಒಂದು ವೇಳೆ**, etc., which often signal a change in sentiment.
-
-The sentences were labeled using three emotions:
-- `Positive`
-- `Negative`
-- `Neutral`
-
-The sentence-level data was then transformed into a binary classification task where the model predicts:
-- `Yes` → if there's an emotion shift
-- `No` → if the emotion remains consistent
-
----
-
-## 🛠️ Steps
-
-### 🧹 Preprocessing
-- Removed unwanted characters such as `'`, `"`, `;`, `:` (retained `!`, `?` as they contribute to emotional tone).
-- **Normalized** Kannada text using the [Indic NLP Library](https://github.com/anoopkunchukuttan/indic_nlp_library).
-- Removed **duplicate sentences**.
-- Handled inconsistent spacing and punctuation.
-
-### 🔍 Feature Extraction
-- Applied **TF-IDF (Term Frequency-Inverse Document Frequency)** vectorization for textual feature representation.
-
-### 🧪 Model Training
-Trained the following ML models to classify emotion shift:
-- Logistic Regression
-- Support Vector Machine (SVM)
-- Naive Bayes
-
----
-
-## 📈 Accuracy Results
-
-| Model              | Accuracy |
-|-------------------|----------|
-| Logistic Regression | 68%      |
-| SVM                | 72%      |
-| Naive Bayes        | **78%** *(though biased toward predicting "Yes")*  
-
-> ⚠️ Note: Due to class imbalance (`Yes`: 177, `No`: 69), metrics such as precision/recall should be considered in addition to accuracy.
-
----
-
-## 📁 Dataset Structure (Post-processing)
-
-Each sentence is labeled with:
-- `Original Sentence`
-- `Part 1` + `Sentiment 1`
-- `Part 2` + `Sentiment 2`
-- `Transition Word`
-- `Shift_Label`: Yes/No
-
----
-
-## 📂 Data Source
-
-> The base text corpus used for manual annotation was extracted from the following publicly available Kaggle dataset:  
-> 🔗 [CC100-CCNet Kannada Dataset by Darshan Adiga](https://www.kaggle.com/datasets/darshanadiga/cc100ccnetkannada)  
->  
-> The dataset was unannotated and web-scraped; only **emotion-shifting sentences were extracted using python script  and labeled manually** from it for the purpose of this research project.
-
----
-
-## 📚 Libraries Used
-
-- `pandas`
-- `scikit-learn`
-- `re` (for regex-based preprocessing)
-- [`Indic NLP Library`](https://github.com/anoopkunchukuttan/indic_nlp_library) (for Kannada normalization)
-
----
-
-## 🔄 Status / Update
-
-> 🚧 **Project Paused at Traditional ML Stage**  
-> This project currently uses **Logistic Regression, SVM, and Naive Bayes**. The goal is to eventually improve sentiment shift prediction using **Deep Learning models** such as BiLSTM or Transformer-based architectures.
-
----
-## Web Interface 
-> **Front End**
-> Used StreamLit to build a responsive web interface
-
----
-**Back End**
-> Exposed a Model as REST API  using FastApi
---
-> ## Sample OutPut
-> <img width="980" height="581" alt="Screenshot 2025-09-06 114914" src="https://github.com/user-attachments/assets/4a6e3f6e-7770-4a06-b62a-3fabca681f48" />
-<img width="787" height="372" alt="Screenshot 2025-09-06 114950" src="https://github.com/user-attachments/assets/d4c51066-0b9d-497b-8cd6-bd8915704133" />
-
-## 🧷 Citation
-
-This project uses the [Indic NLP Library](https://github.com/anoopkunchukuttan/indic_nlp_library).  
-**Citation**:  
-Anoop Kunchukuttan, *The Indic NLP Library*  
-GitHub: [https://github.com/anoopkunchukuttan/indic_nlp_library](https://github.com/anoopkunchukuttan/indic_nlp_library)
-
----
-
-## 👤 Author
-
-*This project was created as an academic exploration into Kannada NLP. Manual annotation, data preprocessing, and modeling were done individually to gain experience in real-world NLP pipeline development.*
-
----
-
+This is a Patented Research Project.
