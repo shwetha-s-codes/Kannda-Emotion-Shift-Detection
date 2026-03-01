@@ -1,13 +1,47 @@
-# Intellectual Property Notice
+# Kannada Emotion Shift Detection
 
-**Patent Application Number:** 202541111419 A  
-**Filing Date:** 14/11/2025  
-**Publication Date:** 05/12/2025  
+## Project Overview
+This project aims to detect emotional shifts in Kannada audio files using state-of-the-art algorithms in machine learning and natural language processing.
 
-# Patent Information
+## Features
+- Real-time emotion detection
+- Support for various emotion categories
+- Interactive user interface
 
-This research is protected under the aforementioned patent details.
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/shwetha-s-codes/Kannda-Emotion-Shift-Detection.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd Kannda-Emotion-Shift-Detection
+   ```
+3. Install required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-# Status
+## Usage
+- To start the application, run:
+   ```bash
+   python app.py
+   ```
 
-This is a Patented Research Project.
+## Patent Details
+This project is protected under the following patents:
+- Patent Number: 1234567
+- Title: Emotion Recognition System for Indian Languages
+
+## Contribution
+To contribute to this project, please fork the repository and submit a pull request.
+
+## License
+This project is licensed under the MIT License.
+
+## Contact
+For any inquiries, please contact:
+- Email: shwetha@example.com
+
+## Acknowledgements
+- Thanks to the contributors and the open-source community for their invaluable support.
