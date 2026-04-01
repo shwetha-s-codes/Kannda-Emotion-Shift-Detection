@@ -28,10 +28,8 @@ This project aims to detect emotional shifts in Kannada audio files using state-
    python app.py
    ```
 
-## Patent Details
-This project is protected under the following patents:
-- Patent Number: 1234567
-- Title: Emotion Recognition System for Indian Languages
+##Patent 
+The Current Project is patented 
 
 ## Contribution
 To contribute to this project, please fork the repository and submit a pull request.
@@ -39,9 +37,6 @@ To contribute to this project, please fork the repository and submit a pull requ
 ## License
 This project is licensed under the MIT License.
 
-## Contact
-For any inquiries, please contact:
-- Email: shwetha@example.com
 
 ## Acknowledgements
 - Thanks to the contributors and the open-source community for their invaluable support.
